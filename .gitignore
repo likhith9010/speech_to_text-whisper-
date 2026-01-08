@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Recordings (audio files and transcripts)
+recordings/
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+
+# Electron build output
+dist/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Speech to Text - Whisper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎙️ Speech to Text</h1>
+      <p class="subtitle">Powered by OpenAI Whisper</p>
+    </header>
+
+    <main>
+      <div class="record-section">
+        <button id="recordBtn" class="record-btn">
+          <span class="btn-icon">🎤</span>
+          <span class="btn-text">Start Recording</span>
+        </button>
+        <div id="recordingIndicator" class="recording-indicator hidden">
+          <div class="pulse"></div>
+          <span>Recording...</span>
+        </div>
+        <div id="timer" class="timer">00:00</div>
+      </div>
+
+      <div class="status-section">
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="result-section">
+        <h2>Transcription</h2>
+        <div class="result-container">
+          <textarea id="transcription" placeholder="Your transcribed text will appear here..." readonly></textarea>
+          <div class="result-actions">
+            <button id="copyBtn" class="action-btn" disabled>
+              📋 Copy
+            </button>
+            <button id="clearBtn" class="action-btn" disabled>
+              🗑️ Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Press the button and speak clearly into your microphone</p>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
